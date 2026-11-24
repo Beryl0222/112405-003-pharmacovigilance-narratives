@@ -14,6 +14,41 @@
       "id": "PV-4C",
       "text": "转发群消息：有人吃宁安片也起疹。",
       "source": "forwarded-message"
+    },
+    {
+      "id": "PV-10",
+      "kind": "identity-evidence",
+      "text": "PV4A与PV4B均为匿名病例CASE4，医院内部关联号相同；PV4C未说明患者身份，不证明是独立病例。"
+    },
+    {
+      "id": "PV-11",
+      "kind": "lab-followup",
+      "text": "CASE4周四化验提示肝酶升高，报告周五签发；周二未取该项样。报告只证明周四检测，不把早期阴性补成阳性。"
+    },
+    {
+      "id": "PV-12",
+      "kind": "doctor-addendum",
+      "text": "医生引用家属的停药后好转，原话来自PV4B，不是新一次随访。"
+    },
+    {
+      "id": "PV-13",
+      "kind": "correction",
+      "text": "药盒核对：CASE4周二服用的为宁安缓释片DR3，不是普通片DR2；两者均含成分甲，剂量方案不同。"
+    },
+    {
+      "id": "PV-14",
+      "kind": "patient-call",
+      "text": "另一个病例CASE5周二开始普通宁安片，周五轻度皮疹；与CASE4没有共同就诊或联系方式。"
+    },
+    {
+      "id": "PV-15",
+      "kind": "medical-review",
+      "text": "CASE4是否存在住院尚待回访，化验异常不能单独证明曾住院。"
+    },
+    {
+      "id": "PV-16",
+      "kind": "followup-request",
+      "text": "安全员周三向CASE4发出核对停药时间请求，周四已经收到家属答复；另一份住院状态请求尚未回答。"
     }
   ],
   "products": [
@@ -23,5 +58,51 @@
       "ingredient": "合成成分甲"
     }
   ],
-  "case_id": "pv-4"
+  "case_id": "pv-4",
+  "context": {
+    "case_links": [
+      {
+        "id": "CASE4",
+        "sources": [
+          "PV-4A",
+          "PV-4B",
+          "PV-10"
+        ]
+      },
+      {
+        "id": "CASE5",
+        "sources": [
+          "PV-14"
+        ]
+      }
+    ],
+    "followups": [
+      {
+        "id": "FU1",
+        "case": "CASE4",
+        "state": "answered",
+        "source": "PV-16"
+      },
+      {
+        "id": "FU2",
+        "case": "CASE4",
+        "state": "pending",
+        "text": "核对是否住院",
+        "sources": [
+          "PV-15"
+        ]
+      }
+    ],
+    "risk_statements": [
+      {
+        "id": "RISK1",
+        "state": "in_use",
+        "text": "普通宁安片存在两个独立病例来源的皮疹线索，时间仍待确认。",
+        "sources": [
+          "PV-4A",
+          "PV-4C"
+        ]
+      }
+    ]
+  }
 }
