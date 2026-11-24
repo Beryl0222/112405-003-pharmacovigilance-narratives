@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "id": "PV-4A",
+      "text": "患者周二服用宁安片后出现皮疹；周三停药，当晚仍有新疹，未诉胸闷。",
+      "source": "clinic-note"
+    },
+    {
+      "id": "PV-4B",
+      "text": "家属称周一已经减半剂量，周三停药后皮疹逐渐消退。",
+      "source": "follow-up-call"
+    },
+    {
+      "id": "PV-4C",
+      "text": "转发群消息：有人吃宁安片也起疹。",
+      "source": "forwarded-message"
+    }
+  ],
+  "products": [
+    {
+      "id": "DR-2",
+      "name": "宁安片",
+      "ingredient": "合成成分甲"
+    }
+  ],
+  "case_id": "pv-4"
+}
